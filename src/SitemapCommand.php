@@ -22,6 +22,10 @@ class SitemapCommand extends Command
                 'url',
                 InputArgument::REQUIRED,
                 'The url to check'
+            )->addArgument(
+                'sitemap',
+                InputArgument::REQUIRED,
+                'Sitemap Filename'
             );
 
     }
@@ -67,7 +71,7 @@ class SitemapCommand extends Command
         $generator = new SitemapGenerator('', $outputDir);
         $generator->toggleGZipFileCreation();
         $generator->setMaxURLsPerSitemap(50000);
-        $generator->setSitemapFileName("sitemap.xml");
+        $generator->setSitemapFileName($input->getArgument('sitemap'));
         foreach($crawlObserver->crawledUrls['200'] as $urlData) {
             $output->writeln("Add: {$urlData['url']}");
 
