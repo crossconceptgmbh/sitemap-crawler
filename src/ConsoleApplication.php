@@ -10,7 +10,7 @@ class ConsoleApplication extends Application
     {
         error_reporting(-1);
 
-        parent::__construct('Sitemap Crawler', '1.0.4');
+        parent::__construct('Sitemap Crawler', '1.0.5');
 
         $this->add(new SitemapCommand());
     }
