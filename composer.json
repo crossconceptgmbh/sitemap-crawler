@@ -1,7 +1,7 @@
 {
     "name": "crossconcept/sitemap-crawler",
     "description": "Crawl complete Site and build a sitemap",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "library",
     "minimum-stability": "stable",
     "license": "MIT",

@@ -54,7 +54,6 @@ class SitemapCommand extends Command
 
         $crawler = Crawler::create($clientOptions)
             ->setConcurrency(3)
-            ->setMaximumCrawlCount(10)
             ->setCrawlObserver($crawlObserver)
             ->setCrawlProfile($crawlProfile);
 
