@@ -76,7 +76,7 @@ class SitemapCommand extends Command
             $output->writeln("Add: {$urlData['url']}");
 
             $datetime = new \DateTime();
-            if(!empty(lastModified)) {
+            if(!empty($urlData['lastModified'])) {
                 $datetime->setTimestamp(strtotime($urlData['lastModified']));
             }
 
