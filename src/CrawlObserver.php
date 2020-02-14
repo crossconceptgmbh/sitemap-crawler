@@ -117,6 +117,7 @@ class CrawlObserver extends \Spatie\Crawler\CrawlObserver
         if(!empty($response->getHeaderLine('Last-Modified'))){
             $crawledUrlData['lastModified'] = $response->getHeaderLine('Last-Modified');
         }
+
         $this->crawledUrls[$statusCode][] = $crawledUrlData;
     }
 

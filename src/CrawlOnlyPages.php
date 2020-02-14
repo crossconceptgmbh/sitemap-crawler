@@ -22,7 +22,10 @@ class CrawlOnlyPages extends CrawlProfile
     public function shouldCrawl(UriInterface $url): bool
     {
         $pathinfo = pathinfo(str_replace($this->baseUrl->getHost(), '', $url));
-        if($this->baseUrl->getHost() === $url->getHost() && (empty($pathinfo['extension']) || $pathinfo['extension'] === 'html' || $pathinfo['extension'] === 'php')) {
+        if($this->baseUrl->getScheme() == $url->getScheme() &&
+            $this->baseUrl->getHost() === $url->getHost() &&
+            (empty($pathinfo['extension']) || $pathinfo['extension'] === 'html') &&
+            (!empty($pathinfo['filename']) && !strstr($pathinfo['filename'], '?'))) {
             return true;
         } else {
             return false;
