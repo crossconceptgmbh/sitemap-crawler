@@ -1,0 +1,26 @@
+{
+    "name": "crossconcept/sitemap-crawler",
+    "description": "Crawl complete Site and build a sitemap",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Speicher",
+            "email": "daniel.speicher@crossconcept.de"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "icamys/php-sitemap-generator": "^2.0",
+        "spatie/crawler": "^4.6",
+        "symfony/console": "^4.0|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Crossconcept\\SitemapCrawler\\": "src"
+        }
+    },
+    "bin": [
+        "sitemapcrawler"
+    ]
+}

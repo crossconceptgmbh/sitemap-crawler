@@ -1,0 +1,5 @@
+composer.lock
+vendor
+sitemap.xml
+sitemap.xml.gz
+.idea
