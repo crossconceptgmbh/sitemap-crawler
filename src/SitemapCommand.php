@@ -49,7 +49,7 @@ class SitemapCommand extends Command
         $crawlObserver = new CrawlObserver($output);
 
         $clientOptions = [
-            RequestOptions::TIMEOUT => 5,
+            RequestOptions::TIMEOUT => 15,
             RequestOptions::VERIFY => false,
             RequestOptions::ALLOW_REDIRECTS => true,
         ];
